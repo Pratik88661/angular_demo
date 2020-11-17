@@ -1,0 +1,17 @@
+<!-- main app container -->
+<div class="jumbotron">
+    <div class="container">
+        <div class="col-sm-8 col-sm-offset-2">
+            <h1>Hi {{currentUser.firstName}}!</h1>
+            <p><u><a [routerLink]="['/create']">Create Question</a></u></p>
+            <p><a [routerLink]="['/login']">Logout</a></p>
+            <alert></alert>
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
+
+
+<div class="text-center">
+   
+</div>

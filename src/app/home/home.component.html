@@ -1,0 +1,38 @@
+<div class="container nhsSystemType_box">
+    <h2 class="text-center">Survey Questions</h2>
+    <div class="col-sm-12">
+      <table class="table table-hover table-responsive">
+        <tr>
+            <td colspan="8" *ngIf="questions.length==0">
+              <p class="NhsSystem-header"> Survey Questions not found</p>
+            </td>
+        </tr>
+        <tr *ngFor='let question of questions;let i = index'>
+            <div class="panel-group">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" href="#collapse{{i}}">{{question.question}}</a>
+                    </h4>
+                  </div>
+                  <div id="collapse{{i}}" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <p><b>URL:</b> {{url}}question/{{question.id}}</p>
+                        <p><b>Option A:</b> {{question.optionA}}</p>
+                        <p><b>Option B:</b> {{question.optionB}}</p>
+                        <p><b>Option C:</b> {{question.optionC}}</p>
+                        <p><b>Option C:</b> {{question.optionD}}</p>
+                        <p><b>Option A Rating:</b> {{question.optionD}}</p>
+                        <p><b>Option B Rating:</b> {{question.optionD}}</p>
+                        <p><b>Option C Rating:</b> {{question.optionD}}</p>
+                        <p><b>Option D Rating:</b> {{question.optionD}}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        
+        </tr>
+      </table>
+    </div>
+  <!-- <p><a [routerLink]="['/login']">Logout</a></p> -->
+</div>
